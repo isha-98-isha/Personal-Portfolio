@@ -77,13 +77,26 @@
         min-height: 100vh;
         margin: 0;
         background:
-          radial-gradient(circle at 10% 0%, color-mix(in srgb, var(--accent) 12%, transparent), transparent 32rem),
+          radial-gradient(
+            circle at 10% 0%,
+            color-mix(in srgb, var(--accent) 12%, transparent),
+            transparent 32rem
+          ),
           var(--bg);
         color: var(--text);
-        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-family:
+          Inter,
+          ui-sans-serif,
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
         font-size: 15px;
         line-height: 1.6;
-        transition: background 180ms ease, color 180ms ease;
+        transition:
+          background 180ms ease,
+          color 180ms ease;
       }
 
       body.is-loading {
@@ -100,7 +113,9 @@
         background: var(--bg);
         opacity: 1;
         visibility: visible;
-        transition: opacity 520ms ease, visibility 520ms ease;
+        transition:
+          opacity 520ms ease,
+          visibility 520ms ease;
       }
 
       .loading-screen.is-complete {
@@ -123,7 +138,8 @@
         border-radius: 20px;
         background: var(--accent);
         color: #fff;
-        box-shadow: 0 12px 28px color-mix(in srgb, var(--accent) 28%, transparent);
+        box-shadow: 0 12px 28px
+          color-mix(in srgb, var(--accent) 28%, transparent);
         font-size: 29px;
         font-weight: 750;
         animation: loading-mark-in 700ms cubic-bezier(0.22, 1, 0.36, 1) both;
@@ -165,7 +181,9 @@
       .shell {
         opacity: 0;
         transform: translateY(12px);
-        transition: opacity 650ms ease, transform 650ms cubic-bezier(0.22, 1, 0.36, 1);
+        transition:
+          opacity 650ms ease,
+          transform 650ms cubic-bezier(0.22, 1, 0.36, 1);
       }
 
       body.is-ready .shell {
@@ -212,7 +230,8 @@
         justify-content: space-between;
         gap: 24px;
         padding: 4px 14px 18px;
-        border-bottom: 1px solid color-mix(in srgb, var(--line) 70%, transparent);
+        border-bottom: 1px solid
+          color-mix(in srgb, var(--line) 70%, transparent);
         background: color-mix(in srgb, var(--bg) 88%, transparent);
         backdrop-filter: blur(14px);
       }
@@ -236,7 +255,8 @@
         border-radius: 10px;
         background: var(--accent);
         color: #fff;
-        box-shadow: 0 7px 15px color-mix(in srgb, var(--accent) 28%, transparent);
+        box-shadow: 0 7px 15px
+          color-mix(in srgb, var(--accent) 28%, transparent);
         font-size: 16px;
       }
 
@@ -275,7 +295,10 @@
         color: var(--text);
         cursor: pointer;
         font-size: 16px;
-        transition: border-color 160ms ease, transform 160ms ease, background 160ms ease;
+        transition:
+          border-color 160ms ease,
+          transform 160ms ease,
+          background 160ms ease;
       }
 
       .theme-toggle:hover {
@@ -307,7 +330,11 @@
         border: 1px solid #343a33;
         border-radius: var(--radius-lg);
         background:
-          linear-gradient(110deg, rgba(10, 13, 11, 0.88), rgba(30, 37, 29, 0.5)),
+          linear-gradient(
+            110deg,
+            rgba(10, 13, 11, 0.88),
+            rgba(30, 37, 29, 0.5)
+          ),
           repeating-linear-gradient(135deg, #1b211c 0 2px, #222a22 2px 4px);
         color: #f4f0e6;
         box-shadow: var(--shadow);
@@ -377,7 +404,9 @@
         border: 1px solid color-mix(in srgb, var(--accent) 22%, var(--line));
         border-radius: 50%;
         background: var(--accent-soft);
-        box-shadow: 0 0 0 12px color-mix(in srgb, var(--accent) 5%, transparent), var(--shadow);
+        box-shadow:
+          0 0 0 12px color-mix(in srgb, var(--accent) 5%, transparent),
+          var(--shadow);
         font-size: 76px;
         transform: rotate(5deg);
       }
@@ -421,7 +450,10 @@
         color: inherit;
         text-decoration: none;
         backdrop-filter: blur(12px);
-        transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+        transition:
+          border-color 180ms ease,
+          box-shadow 180ms ease,
+          transform 180ms ease;
       }
 
       .project-card:hover {
@@ -766,10 +798,27 @@
           <a href="#experience">Experience</a>
           <a href="#skills">Skills</a>
           <a href="#certifications">Certificate</a>
-          <a href="https://github.com/isha-98-isha/" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href="https://www.linkedin.com/in/chaudhari-isha/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a
+            href="https://github.com/isha-98-isha/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub</a
+          >
+          <a
+            href="https://www.linkedin.com/in/chaudhari-isha/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >LinkedIn</a
+          >
           <a href="#contact">Contact</a>
-          <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">☾</button>
+          <button
+            class="theme-toggle"
+            type="button"
+            aria-label="Switch to dark mode"
+            aria-pressed="false"
+          >
+            ☾
+          </button>
         </nav>
       </header>
 
@@ -784,12 +833,18 @@
         <section class="hero" aria-labelledby="intro-title">
           <div>
             <p class="eyebrow">Full-stack developer · AI enthusiast</p>
-            <h1 id="intro-title">Building useful products with <span>thoughtful code.</span></h1>
+            <h1 id="intro-title">
+              Building useful products with <span>thoughtful code.</span>
+            </h1>
             <p class="intro">
-              I’m Isha, a software engineer focused on responsive web applications, scalable APIs, and practical AI-powered experiences.  Skilled in modern software development practices.
+              I’m Isha, a software engineer focused on responsive web
+              applications, scalable APIs, and practical AI-powered experiences.
+              Skilled in modern software development practices.
             </p>
           </div>
-          <div class="avatar" aria-label="Waving hand emoji avatar" role="img">👋</div>
+          <div class="avatar" aria-label="Waving hand emoji avatar" role="img">
+            👋
+          </div>
         </section>
 
         <section id="work" aria-labelledby="work-title">
@@ -798,26 +853,54 @@
             <p>React · Spring Boot · Node.js · AI/ML</p>
           </div>
           <div class="projects">
-            <a class="project-card" href="https://github.com/isha-98-isha" target="_blank" rel="noreferrer" aria-label="View Splitwise Plus project">
+            <a
+              class="project-card"
+              href="https://github.com/isha-98-isha"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="View Splitwise Plus project"
+            >
               <span class="project-icon" aria-hidden="true">✦</span>
               <div>
                 <h3>Splitwise+</h3>
-                <p>Expense Management Web Application built with React, Spring Boot, and MongoDB.</p>
-                <p>RESTful APIs support expense tracking and authentication, with automated balance calculations for group expenses.</p>
+                <p>
+                  Expense Management Web Application built with React, Spring
+                  Boot, and MongoDB.
+                </p>
+                <p>
+                  RESTful APIs support expense tracking and authentication, with
+                  automated balance calculations for group expenses.
+                </p>
               </div>
             </a>
-            <a class="project-card" href="https://github.com/isha-98-isha" target="_blank" rel="noreferrer" aria-label="View Face Detection Attendance System project">
+            <a
+              class="project-card"
+              href="https://github.com/isha-98-isha"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="View Face Detection Attendance System project"
+            >
               <span class="project-icon" aria-hidden="true">⌁</span>
               <div>
                 <h3>Face Detection Attendance System</h3>
-                <p>An AI/ML model using Python and face recognition for real-time user identification and automated attendance.</p>
-                <p>Image processing improves recognition accuracy while reducing manual effort and errors.</p>
+                <p>
+                  An AI/ML model using Python and face recognition for real-time
+                  user identification and automated attendance.
+                </p>
+                <p>
+                  Image processing improves recognition accuracy while reducing
+                  manual effort and errors.
+                </p>
               </div>
             </a>
           </div>
         </section>
 
-        <section id="experience" class="resume-section" aria-labelledby="experience-title">
+        <section
+          id="experience"
+          class="resume-section"
+          aria-labelledby="experience-title"
+        >
           <div class="section-heading">
             <h2 id="experience-title">Experience &amp; Education</h2>
             <p>Growing through real-world work</p>
@@ -826,21 +909,39 @@
             <article class="info-card">
               <div class="timeline">
                 <div class="timeline-item current">
-                  <div class="item-meta"><span>Current · Full-stack Developer Engineer</span><span>Aug 2026 — Present</span></div>
+                  <div class="item-meta">
+                    <span>Current · Full-stack Developer Engineer</span
+                    ><span>Aug 2026 — Present</span>
+                  </div>
                   <h3>CodExpert Solution · Surat</h3>
-                  <p><b>(Fullstak Developer)<br/></b>Built end-to-end applications and optimized database queries across React, Node.js, Spring Boot, PostgreSQL, and MongoDB.</p>
+                  <p>
+                    <b>(Fullstak Developer)<br /></b>Built end-to-end
+                    applications and optimized database queries across React,
+                    Node.js, Spring Boot, PostgreSQL, and MongoDB.
+                  </p>
                 </div>
                 <div class="timeline-item">
-                  <div class="item-meta"><span>Full Stack Intern</span><span>Dec 2025 — Jun 2026</span></div>
+                  <div class="item-meta">
+                    <span>Full Stack Intern</span
+                    ><span>Dec 2025 — Jun 2026</span>
+                  </div>
                   <h3>Thynk Technology · Pune</h3>
-                  (Fullstak Developer Intern)<br/>
-                  <p>Collaborated on scalable features and maintained web applications using React and Spring Boot.</p>
+                  (Fullstak Developer Intern)<br />
+                  <p>
+                    Collaborated on scalable features and maintained web
+                    applications using React and Spring Boot.
+                  </p>
                 </div>
                 <div class="timeline-item">
-                  <div class="item-meta"><span>Angular Intern</span><span>May 2025 — Jul 2025</span></div>
+                  <div class="item-meta">
+                    <span>Angular Intern</span><span>May 2025 — Jul 2025</span>
+                  </div>
                   <h3>Toshal Infotech Pvt. Ltd · Surat</h3>
-                  (Angular Frontend Developer Intern)<br/>
-                  <p>Contributed to real-world frontend development, performance optimization, and debugging.</p>
+                  (Angular Frontend Developer Intern)<br />
+                  <p>
+                    Contributed to real-world frontend development, performance
+                    optimization, and debugging.
+                  </p>
                 </div>
               </div>
             </article>
@@ -866,7 +967,11 @@
           </div>
         </section>
 
-        <section id="skills" class="resume-section" aria-labelledby="skills-title">
+        <section
+          id="skills"
+          class="resume-section"
+          aria-labelledby="skills-title"
+        >
           <div class="section-heading">
             <h2 id="skills-title">Technical toolkit</h2>
             <p>Tools I use to bring ideas to life</p>
@@ -875,44 +980,105 @@
             <div>
               <h3>💡 Core Strengths</h3>
               <ul class="skill-list">
-                <li>Full-stack Development</li><li>SEO</li><li>MVC Architecture</li><li>API Integration</li><li>REST APIs</li><li>Authentication</li><li>Performance Optimization</li><li>WebSockets</li>
+                <li>Full-stack Development</li>
+                <li>SEO</li>
+                <li>MVC Architecture</li>
+                <li>API Integration</li>
+                <li>REST APIs</li>
+                <li>Authentication</li>
+                <li>Performance Optimization</li>
+                <li>WebSockets</li>
               </ul>
             </div>
             <div>
               <h3>🔤 Languages</h3>
               <ul class="skill-list">
-                <li>JavaScript</li><li>TypeScript</li><li>Python</li><li>HTML</li><li>CSS</li>
+                <li>JavaScript</li>
+                <li>TypeScript</li>
+                <li>Python</li>
+                <li>HTML</li>
+                <li>CSS</li>
               </ul>
             </div>
             <div>
               <h3>⚙️ Frameworks, Libraries &amp; Databases</h3>
               <ul class="skill-list">
-                <li>React</li><li>Redux</li><li>Node.js</li><li>Express.js</li><li>Spring Boot</li><li>Tailwind CSS</li><li>Firebase</li><li>PostgreSQL</li><li>MongoDB</li><li>AI / ML / Data Science</li>
+                <li>React</li>
+                <li>Redux</li>
+                <li>Node.js</li>
+                <li>Express.js</li>
+                <li>Spring Boot</li>
+                <li>Tailwind CSS</li>
+                <li>Firebase</li>
+                <li>PostgreSQL</li>
+                <li>MongoDB</li>
+                <li>AI / ML / Data Science</li>
               </ul>
             </div>
             <div>
               <h3>🛠️ Data, Tools &amp; Hosting Platforms</h3>
               <ul class="skill-list">
-                <li>Git &amp; GitHub</li><li>Postman</li><li>VS Code</li><li>Vercel</li><li>Render</li><li>Google Colab</li><li>Android Studio</li><li>Figma</li>
+                <li>Git &amp; GitHub</li>
+                <li>Postman</li>
+                <li>VS Code</li>
+                <li>Vercel</li>
+                <li>Render</li>
+                <li>Google Colab</li>
+                <li>Android Studio</li>
+                <li>Figma</li>
               </ul>
             </div>
           </article>
         </section>
 
-        <section id="certifications" class="resume-section" aria-labelledby="certifications-title">
+        <section
+          id="certifications"
+          class="resume-section"
+          aria-labelledby="certifications-title"
+        >
           <div class="section-heading">
             <h2 id="certifications-title">Certifications &amp; achievements</h2>
             <p>Curious, collaborative, always learning</p>
           </div>
           <div class="certifications">
-            <div class="certification"><span class="certification-icon" aria-hidden="true">✦</span><div><strong>Introduction to Artificial Intelligence</strong><span>Simply Learn</span></div></div>
-            <div class="certification"><span class="certification-icon" aria-hidden="true">◇</span><div><strong>Introduction to Java</strong><span>Simply Learn</span></div></div>
-            <div class="certification"><span class="certification-icon" aria-hidden="true">★</span><div><strong>Tattvahack Hackathon</strong><span>CGPIT, UTU</span></div></div>
-            <div class="certification"><span class="certification-icon" aria-hidden="true">◎</span><div><strong>Google Student Ambassador</strong><span>Google · Welcomed to support peers with Gemini tools, lead workshops, build a learning community, and make technology more accessible on campus.</span></div></div>
+            <div class="certification">
+              <span class="certification-icon" aria-hidden="true">✦</span>
+              <div>
+                <strong>Introduction to Artificial Intelligence</strong
+                ><span>Simply Learn</span>
+              </div>
+            </div>
+            <div class="certification">
+              <span class="certification-icon" aria-hidden="true">◇</span>
+              <div>
+                <strong>Introduction to Java</strong><span>Simply Learn</span>
+              </div>
+            </div>
+            <div class="certification">
+              <span class="certification-icon" aria-hidden="true">★</span>
+              <div>
+                <strong>Tattvahack Hackathon</strong><span>CGPIT, UTU</span>
+              </div>
+            </div>
+            <div class="certification">
+              <span class="certification-icon" aria-hidden="true">◎</span>
+              <div>
+                <strong>Google Student Ambassador</strong
+                ><span
+                  >Google · Welcomed to support peers with Gemini tools, lead
+                  workshops, build a learning community, and make technology
+                  more accessible on campus.</span
+                >
+              </div>
+            </div>
           </div>
         </section>
 
-        <section id="contact" class="resume-section" aria-labelledby="contact-title">
+        <section
+          id="contact"
+          class="resume-section"
+          aria-labelledby="contact-title"
+        >
           <div class="section-heading">
             <h2 id="contact-title">Let’s Get Connect</h2>
             <p>Open to thoughtful opportunities</p>
@@ -922,7 +1088,13 @@
               <h3>Get in touch with Isha</h3>
               <p>Surat, Gujarat · ishachaudhari98@gmail.com · 7038371043</p>
             </div>
-            <a class="contact-link" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=ishachaudhari98@gmail.com" target="_blank" rel="noopener noreferrer">Email me</a>
+            <a
+              class="contact-link"
+              href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=ishachaudhari98@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Email me</a
+            >
           </article>
         </section>
       </main>
@@ -944,22 +1116,34 @@
       let loadingMessageTimer;
 
       if ("scrollRestoration" in history) history.scrollRestoration = "manual";
-      if (window.location.hash) history.replaceState(null, "", window.location.pathname + window.location.search);
+      if (window.location.hash)
+        history.replaceState(
+          null,
+          "",
+          window.location.pathname + window.location.search,
+        );
       window.scrollTo(0, 0);
 
       if (storedTheme) root.dataset.theme = storedTheme;
 
       function updateToggle() {
-        const isDark = root.dataset.theme === "dark" ||
-          (!root.dataset.theme && window.matchMedia("(prefers-color-scheme: dark)").matches);
+        const isDark =
+          root.dataset.theme === "dark" ||
+          (!root.dataset.theme &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches);
         toggle.textContent = isDark ? "☀" : "☾";
-        toggle.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
+        toggle.setAttribute(
+          "aria-label",
+          isDark ? "Switch to light mode" : "Switch to dark mode",
+        );
         toggle.setAttribute("aria-pressed", String(isDark));
       }
 
       toggle.addEventListener("click", () => {
-        const isDark = root.dataset.theme === "dark" ||
-          (!root.dataset.theme && window.matchMedia("(prefers-color-scheme: dark)").matches);
+        const isDark =
+          root.dataset.theme === "dark" ||
+          (!root.dataset.theme &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches);
         const nextTheme = isDark ? "light" : "dark";
         root.dataset.theme = nextTheme;
         localStorage.setItem("isha-theme", nextTheme);
