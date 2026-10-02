@@ -1,40 +1,24 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- 1. Technical Settings (Must be first) -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Portfolio of Isha Chaudhari, a full-stack developer building responsive web applications and AI-powered tools."
-    />
+    
+    <!-- 2. Primary SEO Signals (Crucial for Rankings) -->
     <title>Isha Chaudhari — Full-stack Developer Portfolio</title>
-      <meta name="keywords" content="Isha Chaudhari,
-      isha chaudhari portfolio,
-      full-stack developer, 
-      Frontend developer,
-      Backend developer,
-      software engineer,
-      software developer, 
-      React developer,
-      Node.js developer, 
-      Spring Boot, 
-      AI tools, 
-      machine learning developer, 
-      Python developer, 
-      Developer portfolio, 
-      developer in Surat, 
-      web application development" />
-
-    <!-- 1. The Canonical Link (Tells Google this is the primary version of your site) -->
+    <meta name="description" content="Portfolio of Isha Chaudhari, a full-stack developer building responsive web applications and AI-powered tools." />
     <link rel="canonical" href="https://ishachaudhariportfolio.netlify.app/" />
-
-    <!-- 2. Google Search Console Verification (Paste the exact tag Google gives you here) -->
     <meta name="google-site-verification" content="txp2Mj627b9-Mj1__kc8sno2TirrQaQxR4QXnSoEwhE" />
-    <meta property="og:title" content="Isha Chaudhari — Full-stack Developer Portfolio" />
-    <meta property="og:description" content="Software engineer focused on responsive web applications, scalable APIs, and practical AI-powered experiences." />
+
+    <!-- 3. Meta Keywords (Cleaned, single-line format) -->
+    <meta name="keywords" content="Isha Chaudhari,isha chaudhari portfolio,full-stack developer,Frontend developer,Backend developer,software engineer,software developer,React developer,Node.js developer,Spring Boot,AI tools,machine learning developer,Python developer,Developer portfolio,developer in Surat,web application development,netlify portfolio" />
+
+    <!-- 4. Open Graph / Social Media Preview Tags -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://ishachaudhariportfolio.netlify.app/" />
-     <!-- Point this directly to your main live preview asset -->
+    <meta property="og:title" content="Isha Chaudhari — Full-stack Developer Portfolio" />
+    <meta property="og:description" content="Software engineer focused on responsive web applications, scalable APIs, and practical AI-powered experiences." />
     <meta property="og:image" content="https://ishachaudhariportfolio.netlify.app/assets/og-preview.png" />
     <style>
       :root {
@@ -425,19 +409,21 @@
       }
 
       .avatar {
-        display: grid;
-        width: 164px;
-        height: 164px;
-        place-items: center;
-        border: 1px solid color-mix(in srgb, var(--accent) 22%, var(--line));
-        border-radius: 50%;
-        background: var(--accent-soft);
-        box-shadow:
-          0 0 0 12px color-mix(in srgb, var(--accent) 5%, transparent),
-          var(--shadow);
-        font-size: 76px;
-        transform: rotate(5deg);
-      }
+  width: 350px;       /* Adjust size to fit your layout design */
+  height: 350px;
+  border-radius: 50%; /* Keeps the classic clean circular profile shape */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* Ensures your face isn't stretched or distorted */
+}
+
 
       .section-heading {
         display: flex;
@@ -873,8 +859,12 @@
               Skilled in modern software development practices.
             </p>
           </div>
-          <div class="avatar" aria-label="Waving hand emoji avatar" role="img">
-            👋
+          <div class="avatar">
+            <img 
+              src="assets/isha-chaudhari1.jpg" 
+              alt="Isha Chaudhari — Professional Full-Stack Developer and AI Engineer Portfolio Photo" 
+              loading="eager"
+            />
           </div>
         </section>
 
