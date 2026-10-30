@@ -714,6 +714,214 @@
         font-weight: 750;
       }
 
+/* =================================
+   TECHNICAL TOOLKIT
+================================= */
+
+#skills .section-heading {
+  margin-bottom: 28px;
+}
+
+#skills .section-heading p {
+  max-width: 650px;
+}
+
+/* Six category cards */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  width: 100%;
+}
+
+/* Individual category card */
+.skill-category-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 30px;
+  min-height: 220px;
+  background: var(--card, #ffffff);
+  border: 1px solid var(--border, #e5e3de);
+  border-radius: 22px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.035);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.skill-category-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.07);
+  border-color: var(--accent, #b8873c);
+}
+
+/* Category icon */
+.skill-card-icon {
+  flex-shrink: 0;
+  width: 76px;
+  height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.icon-gold {
+  color: #dba33f;
+  background: #fbf3e5;
+}
+
+.icon-blue {
+  color: #4c9be8;
+  background: #edf5fc;
+}
+
+.icon-purple {
+  color: #8c70c9;
+  background: #f2eefb;
+}
+
+.icon-green {
+  color: #6d9663;
+  background: #eff5ed;
+}
+
+.icon-orange {
+  color: #df9650;
+  background: #fbf1e7;
+}
+
+/* Card content */
+.skill-card-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.skill-card-content h3 {
+  margin: 8px 0 8px;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--text, #202522);
+}
+
+.skill-count {
+  margin: 0;
+  font-size: 14px;
+  color: var(--muted, #777d75);
+}
+
+.skill-divider {
+  height: 1px;
+  width: 100%;
+  margin: 18px 0 20px;
+  background: var(--border, #e5e3de);
+}
+
+/* Technology badges */
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.skill-list li {
+  padding: 8px 13px;
+  border-radius: 9px;
+  background: var(--skill-bg, #f7f4ee);
+  color: var(--skill-text, #8a642b);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.3;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.skill-list li:hover {
+  background: #f0e7d7;
+  transform: translateY(-2px);
+}
+
+/* =================================
+   RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 900px) {
+  .skills-grid {
+    gap: 16px;
+  }
+
+  .skill-category-card {
+    gap: 16px;
+    padding: 22px;
+  }
+
+  .skill-card-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 27px;
+  }
+
+  .skill-card-content h3 {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 650px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .skill-category-card {
+    min-height: auto;
+    padding: 22px;
+  }
+
+  .skill-card-icon {
+    width: 58px;
+    height: 58px;
+    font-size: 25px;
+  }
+
+  .skill-card-content h3 {
+    font-size: 17px;
+  }
+
+  .skill-list {
+    gap: 8px;
+  }
+
+  .skill-list li {
+    font-size: 12px;
+    padding: 7px 10px;
+  }
+}
+
+@media (max-width: 420px) {
+  .skill-category-card {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .skill-card-icon {
+    width: 52px;
+    height: 52px;
+  }
+
+  .skill-card-content h3 {
+    margin-top: 0;
+  }
+}
+
       .skills-layout {
         display: grid;
         grid-template-columns: 0.8fr 1.2fr;
@@ -949,9 +1157,7 @@
               Building useful products with <span>thoughtful code.</span>
             </h1>
             <p class="intro">
-              I’m Isha, a software engineer focused on responsive web
-              applications, scalable APIs, and practical AI-powered experiences.
-              Skilled in modern software development practices.
+              I’m Isha, a full-stack developer dedicated to crafting responsive user interfaces, scaling backend APIs, and engineering practical AI-powered experiences with modern Vibe Coding workflows.
             </p>
           </div>
           <div class="avatar">
@@ -1224,83 +1430,138 @@
           </div>
         </section>
 
-        <section
-          id="skills"
-          class="resume-section"
-          aria-labelledby="skills-title"
-        >
-          <div class="section-heading">
-            <h2 id="skills-title">Technical toolkit</h2>
-            <p>Tools I use to bring ideas to life</p>
-          </div>
-          <article class="info-card skills-layout">
+        
+<section
+  id="skills"
+  class="resume-section"
+  aria-labelledby="skills-title"
+>
+  <div class="section-heading">
+    <h2 id="skills-title">Technical Toolkit</h2>
+    <p>Technologies and tools I use to build modern, reliable, and scalable products.</p>
+  </div>
 
-            <div>
-              <h3>🔤 Programming Languages</h3>
-              <ul class="skill-list">
-                <li>JavaScript</li>
-                <li>TypeScript</li>
-                <li>Java</li>
-                <li>Python</li>
-                <li>HTML</li>
-                <li>CSS</li>
-              </ul>
-            </div>
-            <div>
-              <h3>⚙️ Frameworks, Libraries &amp; Databases</h3>
-              <ul class="skill-list">
-                <li>React</li>
-                <li>Redux</li>
-                <li>Next.js</li>
-                <li>Node.js</li>
-                <li>Express.js</li>
-                <li>Spring Boot</li>
-                <li>Tailwind CSS</li>
-                <li>MongoDB</li>
-                <li>MySQL</li>
-              </ul>
-            </div>
-            <div>
-              <h3>🛠️ DevOps, Tools &amp; Hosting Platforms </h3>
-              <ul class="skill-list">
-                <li>Git &amp; GitHub</li>
-                <li>GitHub Actions</li>
-                <li>Docker</li>
-                <li>Linux</li>
-                <li>CI/CD Pipeline</li>
-                <li>Self-hosted Runners</li>
-                <li>Postman</li>
-                <li>VS Code</li>
-                <li>Vercel</li>
-                <li>Render</li>
-                <li>Netlify</li>
-                <li>AWS</li>
-                <li>Firebase</li>
-                <li>Google Colab</li>
-                <li>Android Studio</li>
-                <li>Figma</li>
-                <li>Canva</li>
-                <li>Jupyter Notebook</li>
-              </ul>
-            </div>
-            <div>
-              <h3>💡 Core Competencies</h3>
-              <ul class="skill-list">
-                <li>Full-stack Development</li>
-                <li>AI / ML / Data Science</li>
-                <li>OOPs Concepts</li>
-                <li>MVC Architecture</li>
-                <li>API Integration</li>
-                <li>REST APIs</li>
-                <li>Authentication</li>
-                <li>Performance Optimization</li>
-                <li>WebSockets</li>
-                <li>SEO</li>
-              </ul>
-            </div>
-            
-          </article>
-        </section>
+  <div class="skills-grid">
+
+    <!-- 1. Programming Languages -->
+    <article class="skill-category-card">
+      <div class="skill-card-icon icon-gold" aria-hidden="true">&lt;/&gt;</div>
+      <div class="skill-card-content">
+        <h3>Programming Languages</h3>
+        <div class="skill-divider"></div>
+        <ul class="skill-list">
+          <li>JavaScript</li>
+          <li>TypeScript</li>
+          <li>Java</li>
+          <li>Python</li>
+          <li>HTML5</li>
+          <li>CSS3</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- 2. Frameworks & Libraries -->
+    <article class="skill-category-card">
+      <div class="skill-card-icon icon-blue" aria-hidden="true">🖧</div>
+      <div class="skill-card-content">
+        <h3>Frameworks &amp; Libraries</h3>
+        
+        <div class="skill-divider"></div>
+        <ul class="skill-list">
+          <li>React</li>
+          <li>Next.js</li>
+          <li>Node.js</li>
+          <li>Express.js</li>
+          <li>Angular</li>
+          <li>Spring Boot</li>
+          <li>Redux</li>
+          <li>WebSockets</li>
+          <li>Tailwind CSS</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- 3. Databases & Cloud Platforms -->
+    <article class="skill-category-card">
+      <div class="skill-card-icon icon-purple" aria-hidden="true">⛃</div>
+      <div class="skill-card-content">
+        <h3>Databases &amp; Cloud Platforms</h3>
+        
+        <div class="skill-divider"></div>
+        <ul class="skill-list">
+          <li>MongoDB</li>
+          <li>PostgreSQL</li>
+          <li>MySQL</li>
+          <li>AWS (EC2/S3)</li>
+          <li>Firebase</li>
+          <li>Vercel</li>
+          <li>Netlify</li>
+          <li>Render</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- 4. DevOps & Workflow Tools -->
+    <article class="skill-category-card">
+      <div class="skill-card-icon icon-green" aria-hidden="true">🛠</div>
+      <div class="skill-card-content">
+        <h3>DevOps &amp; Workflow Tools</h3>
+        
+        <div class="skill-divider"></div>
+        <ul class="skill-list">
+          <li>Git &amp; GitHub</li>
+          <li>GitHub Actions</li>
+          <li>CI/CD Pipelines</li>
+          <li>Docker</li>
+          <li>Linux</li>
+          <li>Postman</li>
+          <li>Nginx</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- 5. Design & Development IDEs -->
+    <article class="skill-category-card">
+      <div class="skill-card-icon icon-orange" aria-hidden="true">✎</div>
+      <div class="skill-card-content">
+        <h3>Design &amp; Development IDEs</h3>
+        
+        <div class="skill-divider"></div>
+        <ul class="skill-list">
+          <li>VS Code</li>
+          <li>Android Studio</li>
+          <li>Figma</li>
+          <li>Canva</li>
+          <li>Jupyter Notebook</li>
+          <li>Google Colab</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- 6. Core Competencies -->
+    <article class="skill-category-card">
+      <div class="skill-card-icon icon-gold" aria-hidden="true">☆</div>
+      <div class="skill-card-content">
+        <h3>Core Competencies</h3>
+        
+        <div class="skill-divider"></div>
+        <ul class="skill-list">
+          <li>Vibe Coding (AI-Driven Development)</li>
+          <li>Microservices Architecture</li>
+          <li>API &amp; Unit Testing</li>
+          <li>AI / ML / Data Science</li>
+          <li>OOP Concepts</li>
+          <li>MVC Architecture</li>
+          <li>API Integration</li>
+          <li>Performance Optimization</li>
+          <li>SEO</li>
+        </ul>
+      </div>
+    </article>
+
+  </div>
+</section>
+
 
         <section
           id="certifications"
@@ -1404,6 +1665,14 @@
             <div>
               <h3>Get in touch with Isha</h3>
               <p>Surat, Gujarat · ishachaudhari98@gmail.com · 7038371043</p>
+              <a
+                href="https://pdfbros.com/s/urdtpem"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="View Isha's resume"
+              >
+                View Resume
+              </a>
             </div>
             <a
               class="contact-link"
