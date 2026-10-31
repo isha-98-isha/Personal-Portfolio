@@ -741,10 +741,10 @@
   gap: 24px;
   padding: 30px;
   min-height: 220px;
-  background: var(--card, #ffffff);
-  border: 1px solid var(--border, #e5e3de);
+  background: var(--surface);
+  border: 1px solid var(--line);
   border-radius: 22px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.035);
+  box-shadow: 0 5px 18px color-mix(in srgb, var(--text) 3%, transparent);
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease,
@@ -753,8 +753,8 @@
 
 .skill-category-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.07);
-  border-color: var(--accent, #b8873c);
+  box-shadow: var(--shadow);
+  border-color: color-mix(in srgb, var(--accent) 45%, var(--line));
 }
 
 /* Category icon */
@@ -771,28 +771,28 @@
 }
 
 .icon-gold {
-  color: #dba33f;
-  background: #fbf3e5;
+  color: var(--accent-strong);
+  background: var(--accent-soft);
 }
 
 .icon-blue {
-  color: #4c9be8;
-  background: #edf5fc;
+  color: var(--accent-strong);
+  background: var(--accent-soft);
 }
 
 .icon-purple {
-  color: #8c70c9;
-  background: #f2eefb;
+  color: var(--accent-strong);
+  background: var(--accent-soft);
 }
 
 .icon-green {
-  color: #6d9663;
-  background: #eff5ed;
+  color: var(--accent-strong);
+  background: var(--accent-soft);
 }
 
 .icon-orange {
-  color: #df9650;
-  background: #fbf1e7;
+  color: var(--accent-strong);
+  background: var(--accent-soft);
 }
 
 /* Card content */
@@ -806,20 +806,20 @@
   font-size: 19px;
   font-weight: 700;
   line-height: 1.35;
-  color: var(--text, #202522);
+  color: var(--text);
 }
 
 .skill-count {
   margin: 0;
   font-size: 14px;
-  color: var(--muted, #777d75);
+  color: var(--muted);
 }
 
 .skill-divider {
   height: 1px;
   width: 100%;
   margin: 18px 0 20px;
-  background: var(--border, #e5e3de);
+  background: var(--line);
 }
 
 /* Technology badges */
@@ -834,19 +834,23 @@
 
 .skill-list li {
   padding: 8px 13px;
+  border: 1px solid var(--line);
   border-radius: 9px;
-  background: var(--skill-bg, #f7f4ee);
-  color: var(--skill-text, #8a642b);
+  background: var(--surface-solid);
+  color: var(--accent-strong);
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 650;
   line-height: 1.3;
   transition:
     background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
     transform 0.2s ease;
 }
 
 .skill-list li:hover {
-  background: #f0e7d7;
+  background: var(--accent-soft);
+  border-color: color-mix(in srgb, var(--accent) 45%, var(--line));
   transform: translateY(-2px);
 }
 
@@ -953,6 +957,15 @@
         font-weight: 650;
       }
 
+      #skills .skill-list li {
+        color: var(--accent-strong);
+      }
+
+      #skills .skill-list li:hover {
+        background: var(--accent-soft);
+        color: var(--accent-strong);
+      }
+
       .certifications {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1018,6 +1031,28 @@
         font-size: 13px;
         font-weight: 750;
         text-decoration: none;
+      }
+      .resume-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 8px;
+        padding: 9px 16px;
+        background: transparent;
+        color: #a87932;
+        border: 1px solid #a87932;
+        border-radius: 8px;
+        font-size: 13px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.25s ease;
+      }
+
+      .resume-link:hover {
+        background: #a87932;
+        color: #ffffff;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 10px rgba(168, 121, 50, 0.2);
       }
 
       @media (max-width: 680px) {
@@ -1146,7 +1181,7 @@
         <section class="cover" aria-label="Portfolio cover">
           <div>
             <h2>Isha Chaudhari</h2>
-            <p>Full-stack developer · AI enthusiast</p>
+            <p>SOFTWARE DEVELOPER</p>
           </div>
         </section>
 
@@ -1186,13 +1221,15 @@
           <span class="project-icon" aria-hidden="true">✦</span>
           <h3>Splitwise+</h3>
           <p>
-            A full-stack expense management application built using React.js, Spring Boot, and MongoDB. Designed to simplify group expense tracking with automated balance calculations and expense splitting.
+            A full-stack individual & group expense management application built with React.js,
+            Spring Boot, and MongoDB. Simplifies shared expense tracking through
+            automated balance calculations, expense splitting, and settlement management.
           </p>
           <h4 class="project-features-title">Features:</h4>
           <ul class="project-features" aria-label="Splitwise+ features">
             <li>Expense and debt settlement tracking.</li>
-            <li>Group expense management.</li>
-            <li>Automated matrix-based balance calculation with Pie Chart.</li>
+            <li>Track individual contributions and outstanding balances.</li>
+            <li>Automated matrix-based balance calculation through Pie Chart.</li>
             <li>Real-time calculation of participant balances.</li>
             <li>User-friendly interface for easy expense entry and management.</li>
           </ul>
@@ -1238,7 +1275,7 @@
           <span class="project-icon" aria-hidden="true">💬</span>
           <h3>Real-Time Chat App</h3>
           <p>
-            A full-stack, 1-on-1 private messaging application built using Node.js, Express.js, and Socket.IO. Enables instant communication between users with real-time presence tracking, offline message delivery, typing indicators, and read receipts.
+            A full-stack private messaging application built with Node.js, Express.js, and Socket.IO. Supports real-time communication between users with real-time presence tracking, offline message delivery, typing indicators, and read receipts.
           </p>
 
           <h4 class="project-features-title">Features:</h4>
@@ -1287,7 +1324,7 @@
 
     <!-- Face Detection Attendance System -->
     <div class="project-item">
-      <p class="project-tech">AI/ML · Python · OpenCV</p>
+      <p class="project-tech">AI/ML · Python · OpenCV · MySQL</p>
 
       <article class="project-card">
         <div class="project-copy">
@@ -1349,7 +1386,7 @@
               <div class="timeline">
                 <div class="timeline-item current">
                   <div class="item-meta">
-                    <span>Current · Associate Full-stack Developer Engineer</span><span>June 2026 — Present</span>
+                    <span>Current · Associate Full-stack Developer</span><span>June 2026 — Present</span>
                   </div>
                   <h3>
                     <a 
@@ -1666,9 +1703,10 @@
               <h3>Get in touch with Isha</h3>
               <p>Surat, Gujarat · ishachaudhari98@gmail.com · 7038371043</p>
               <a
+                class="resume-link"
                 href="https://pdfbros.com/s/urdtpem"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 aria-label="View Isha's resume"
               >
                 View Resume
